@@ -1,11 +1,11 @@
 import glob
 import os
 def executecommand(file):
-     command = "tsvtojson -t input1.tsv   -j " + file +   "  -c col.txt -o employmentjobs"
+     command = "tsvtojson -t input1.tsv   -j " + file +   "  -c colheaders.txt -o employmentjobs"
      print command
      os.system(command) 
-inputpath = '/Users/srikanthgandupalli/Desktop/Courses/csci572/tika-1.6/input/*.tsv'
-outputdir = '/Users/srikanthgandupalli/csci572/code/outputdata/'   
+inputpath = '../input/*.tsv'
+outputdir = '.'   
 files=glob.glob(inputpath)
 outfilename = "output"
 outfilesuffix = ".json"
